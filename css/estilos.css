@@ -185,6 +185,59 @@ body{
 }
 /*           Section Services         */
 
+/*           Section Results         */
+.results{
+	background: linear-gradient(rgba(4,161,255,.5),rgba(0,0,0,.5)), url(../img/paralax.jpg) center/cover;
+	background-attachment: fixed;
+	width: 100%;
+	margin: auto;
+	padding: 5%;
+
+	display: flex;
+	color: #fff;
+}
+.results-box-cards{
+	width: 60%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.card-results{
+	width: 40%;
+	background: rgba(15, 238, 207, 0.4);
+	border-radius: 7px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+.card-results__title{
+	font-size: 50px;
+}
+.card-results__text{
+	margin: 20px 0;
+}
+.results-box-text{
+	width: 40%;
+	padding-left: 10px;
+}
+.results__title{
+	font-weight: normal;
+	font-size: 35px;
+}
+.results__parrafo{
+	margin: 20px 0;
+}
+.results__btn{
+	background: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+/*           Section Results         */
+
+
 /*           Media Queris         */
 /*@media screen and (max-width: 800px) {
 	.header{
@@ -220,6 +273,13 @@ body{
 	}
 	.card:nth-child(2n){
 		animation-delay: 5.5s;
+	}
+	.results{
+		flex-direction: column;
+	}
+	.results-box-cards,
+	.results-box-text{
+		width: 100%;
 	}
 }*/
 /*           Media Queris         */
