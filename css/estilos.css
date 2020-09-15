@@ -140,17 +140,13 @@ body{
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: flex-start;
+	transition: all ease 3s;
+}
+.card:active{
 	animation-name: aparecer;
-	animation-duration: 3s;
-	animation-delay: 5s;
+	animation-duration: 2s;
+	animation-delay: 1s;
 	animation-timing-function: linear;
-
-}
-.card-2{
-	animation-delay: 5.5s;
-}
-.card-3{
-	animation-delay: 6s;
 }
 @keyframes aparecer {
 	from{
@@ -276,8 +272,57 @@ body{
 /*           Section Supports         */
 
 
+/*           FOOTER         */
+footer{
+	background: #ddd;
+	padding: 5%;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;	
+}
+.footer__logo{
+	font-size: 10vmin;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.footer-services__title,
+.footer-company__title{
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.footer-services__text,
+.footer-company__text{
+	text-align: center;
+	color: gray;
+	margin-bottom: 5px;
+}
+.footer-social__title{
+	text-align: center;
+	font-size: 20px;
+	font-weight: normal;
+}
+.social__icon{
+	border: 2px solid gray;
+	color: gray;
+	border-radius: 50%;
+	padding: 5px ;
+	font-size: 20px;
+	margin-left: 5px;
+	margin-top: 70px;
+}
+.fa-facebook-f{
+	padding: 5px 10px;
+}
+
+/*           FOOTER         */
+
+
 /*           Media Queris         */
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 	.header{
 		display: flex;
 		justify-content: flex-start;
@@ -306,12 +351,6 @@ body{
 	.card{
 		width: 45%;
 	}
-	.card:nth-child(3n){
-		animation-delay: 5s;
-	}
-	.card:nth-child(2n){
-		animation-delay: 5.5s;
-	}
 	.results{
 		flex-direction: column;
 	}
@@ -331,6 +370,17 @@ body{
 		width: 100%;
 		padding-left: 0;
 	}
+	footer{
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.footer-services,
+	.footer-company{
+		margin-bottom: 20px;
+	}
+	.footer__logo{
+		margin-right: 0;
+	}
 
-}*/
+}
 /*           Media Queris         */
