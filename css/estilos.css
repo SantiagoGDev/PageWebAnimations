@@ -11,10 +11,12 @@ body{
 .header{
 	position: fixed;
 	top: 0;
+	z-index: 100;
 	width: 100%;
 	height: 80px;
 	background: #fff;
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,.8);
+	transition: all ease .8s;
 
 	display: flex;
 	justify-content: space-around;
@@ -32,9 +34,22 @@ body{
 	font-size: 20px;
 	font-weight: normal;
 }
-.main-menu__item:hover{
+.main-menu__item:hover,
+.active{
 	background: #88e396;
 	color: #fff;
+}
+.main-menu-box-responsive{
+	display: none;
+}
+.main-menu__icon{
+	font-size: 30px;
+	margin-right: 20px;
+	cursor: pointer;
+	transition: all ease 1s;
+}
+.main-menu__icon:hover{
+	color: #88e396;
 }
 /*           Header Fixed         */
 
@@ -76,31 +91,6 @@ body{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	animation-name: imagen;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-}
-@keyframes imagen {
-	0%{
-		transform: translateX(100%);
-		opacity: 0;
-	}
-	25%{
-		transform: translateX(75%);
-		opacity: .2;
-	}
-	50%{
-		transform: translateX(50%);
-		opacity: .4;
-	}
-	75%{
-		transform: translateX(25%);
-		opacity: .6;
-	}
-	100%{
-		transform: translateX(0%);
-		opacity: .8;
-	}
 }
 /*           Section Welcome         */
 
@@ -141,21 +131,6 @@ body{
 	justify-content: space-evenly;
 	align-items: flex-start;
 	transition: all ease 3s;
-}
-.card:active{
-	animation-name: aparecer;
-	animation-duration: 2s;
-	animation-delay: 1s;
-	animation-timing-function: linear;
-}
-@keyframes aparecer {
-	from{
-		transform: translateX(-50%) scale(0);
-	}
-	to{
-		transform: translateX(0%)  scale(1);
-		opacity: .5;
-	}
 }
 .card__icon{
 	display: block;
@@ -282,7 +257,7 @@ footer{
 	align-items: center;	
 }
 .footer__logo{
-	font-size: 10vmin;
+	font-size: 9vmin;
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
@@ -325,13 +300,41 @@ footer{
 @media screen and (max-width: 800px) {
 	.header{
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 	}
 	.header__logo{
 		margin-left: 20px;
 	}
 	.main-menu{
-		display: none;
+		background: linear-gradient(rgba(6, 197, 255, .8),rgba(206, 17, 17, .8));
+		position: fixed;
+		top:-100vh;
+
+		width: 100%;
+		height:100vh;
+
+		transition: all ease 1s;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		clip-path: circle(0% at 100% 0);
+	}
+	.main-menu--clip{
+		clip-path: circle(150% at 100% 0);
+	}
+	.main-menu__item:hover,
+	.active{
+		background: none;
+		border: 2px solid white;
+/*		border-top: 2px solid white;
+		border-bottom: 2px solid white;*/
+	}
+	.main-menu-box-responsive{
+		display: block;
+		position: relative;
+		z-index: 100;
 	}
 	.welcome{
 		margin: 100px auto;
@@ -382,5 +385,34 @@ footer{
 		margin-right: 0;
 	}
 
+}
+@media screen and (max-width: 550px) {
+	.header__logo{
+		font-size: 40px;
+	}
+	.welcome__parrafo{
+		font-size: 16px;
+	}
+	.services__title{
+		font-size: 30px;
+	}
+	.card,
+	.card-results{
+		width: 90%;
+	}
+	.card__title{
+		font-size: 25px;
+	}
+	.card-results__title{
+		font-size: 40px;
+	}
+	.supports__option-title{
+		font-size: 22px;
+	}
+	.footer-services__title,
+	.footer-company__title,
+	.footer-social__title{
+		font-size: 18px;
+	}
 }
 /*           Media Queris         */
