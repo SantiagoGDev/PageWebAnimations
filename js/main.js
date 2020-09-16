@@ -21,7 +21,6 @@ function menuResponsive() {
 
 	bars.addEventListener('click', ()=>{
 		if (auxs == 0) {
-			menu.style.top = '0';
 			menu.classList.toggle('main-menu--clip');
 			bars.classList.remove('fa-bars');	
 			bars.classList.add('fa-times');
@@ -30,7 +29,6 @@ function menuResponsive() {
 			menu.classList.remove('main-menu--clip');
 			bars.classList.add('fa-bars');	
 			bars.classList.remove('fa-times');
-			menu.style.top = '-100vh';
 			auxs = 0;
 		}
 	})	
