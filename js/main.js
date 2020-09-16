@@ -1,5 +1,3 @@
-AOS.init()
-
 function menuActive() {
 	let btn = document.querySelectorAll('.main-menu__item');
 	btn.forEach(element =>{
