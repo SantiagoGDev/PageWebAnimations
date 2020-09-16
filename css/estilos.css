@@ -6,6 +6,7 @@
 body{
 	font-size: 16px;
 	font-family: 'Helvetica';
+	overflow-x: hidden;
 }
 .wrapper{
 	width: 100%;
@@ -214,6 +215,7 @@ body{
 
 /*           Section Supports         */
 .supports{
+	width: 100%;
 	padding: 10% 5%;
 	display: flex;
 }
@@ -253,6 +255,7 @@ body{
 
 /*           FOOTER         */
 footer{
+	width: 100%;
 	background: #ddd;
 	padding: 5%;
 
@@ -312,7 +315,8 @@ footer{
 	.main-menu{
 		background: linear-gradient(rgba(6, 197, 255, .8),rgba(206, 17, 17, .8));
 		position: fixed;
-		top:0vh;
+		top:0;
+
 
 		width: 100%;
 		height:100vh;
